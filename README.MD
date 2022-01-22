@@ -1,6 +1,5 @@
 # 🥩 Steak Script 🥩
 
-
 # Dependencies
 * [QBCore](https://github.com/qbcore-framework)
 * [QB-Target](https://github.com/BerkieBb/qb-target)
