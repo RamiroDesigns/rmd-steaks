@@ -51,6 +51,22 @@ RegisterNetEvent('rmd-steaks:client:cookSteak', function() -- Cook Steaks
     end, "rawbeef")  
 end)
 
+
+RegisterNetEvent('rmd-steaks:client:eatSteak', function(itemName)
+    TriggerEvent('animations:client:EmoteCommandStart', {"eat"})
+    QBCore.Functions.Progressbar("eat_something", "Eating Steak", 5000, false, true, {
+        disableMovement = false,
+        disableCarMovement = false,
+		disableMouse = false,
+		disableCombat = true,
+    }, {}, {}, {}, function() -- Done
+        TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items[itemName], "remove")
+        TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+        TriggerServerEvent("QBCore:Server:SetMetaData", "hunger", QBCore.Functions.GetPlayerData().metadata["hunger"] + ConsumeablesEat[itemName])
+        TriggerServerEvent('hud:server:RelieveStress', math.random(2, 4))
+    end)
+end)
+
 -- Target Exports
 
 exports['qb-target']:AddTargetModel(Config.Props, {

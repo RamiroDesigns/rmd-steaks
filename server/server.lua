@@ -14,3 +14,11 @@ RegisterNetEvent('steaks:server:cookedMeat', function() -- Event used to give Co
     TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items['cookedsteak'], "add")
     TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items['rawbeef'], "removed")
 end)
+
+QBCore.Functions.CreateUseableItem("cookedsteak", function(source, item)
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+	if Player.Functions.RemoveItem(item.name, 1, item.slot) then
+        TriggerClientEvent("rmd-steaks:client:eatSteak", src, item.name)
+    end
+end)
