@@ -9,7 +9,7 @@
 * Uses QB-Target
 * Ability to Butcher Meat from Cows
 * Cook Steaks at Configurable BBQ Pit Props
-* Configuarable Cook times and how filling the steak is!
+* Configurable Cook times and how filling the steak is!
 
 # Previews
 
