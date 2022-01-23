@@ -7,9 +7,7 @@
 # Key Features
 * Uses QB-Target
 * Ability to Butcher Meat from Cows
-* Cook Steaks at restaurants
-* Cook Steaks at BBQ Pit Props
-* Choose how you want your steak
+* Cook Steaks at Configurable BBQ Pit Props
 #
 
 # Previews
