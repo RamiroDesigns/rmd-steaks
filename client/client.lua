@@ -12,7 +12,7 @@ RegisterNetEvent('rmd-steaks:client:butcherMeat', function() -- Event Used to Ge
                 disableInventory = true,
             }, {}, {}, {}, function()
                 TriggerEvent('animations:client:EmoteCommandStart', {"c"})
-                TriggerServerEvent('steaks:server:rawMeat') -- give raw meat event
+                TriggerServerEvent('steaks:server:rawMeat')
                 QBCore.Functions.Notify("You recieved some meat!", "success", "20") 
                 local player = PlayerPedId()
                 local coords = GetEntityCoords(player)
@@ -39,7 +39,7 @@ RegisterNetEvent('rmd-steaks:client:cookSteak', function() -- Cook Steaks
                 disableInventory = true,
             }, {}, {}, {}, function()
                 TriggerEvent('animations:client:EmoteCommandStart', {"c"})
-                TriggerServerEvent('steaks:server:cookedMeat') -- give cooked meat event
+                TriggerServerEvent('steaks:server:cookedMeat')
                 QBCore.Functions.Notify("You recieved some meat!", "success", "20") 
             end, function() -- Cancel
                 TriggerEvent('animations:client:EmoteCommandStart', {"c"})
