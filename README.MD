@@ -11,6 +11,12 @@
 * Cook Steaks at Configurable BBQ Pit Props
 * Configurable Cook times and how filling the steak is!
 
+# Installation
+* Import shared.md into your shared.lua or items.lua script
+* Import [img] directory into your inventory html/images directory
+* ensure rmd-steaks
+* Enjoy!
+
 # Previews
 
 ### Ability to Cook at all BBQ Pits on the Map
